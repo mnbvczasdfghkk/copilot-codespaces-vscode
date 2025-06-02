@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# تولید داده‌های نمونه (مثلاً برای شبیه‌سازی یک موج سینوسی یا داده‌های علمی)
+x = np.linspace(0, 10, 100)
+y = np.sin(x) * np.exp(-0.1 * x)  # معادله نمونه برای یه موج سینوسی با میرایی
+
+# ایجاد نمودار
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, label='موج سینوسی با میرایی', color='blue', linewidth=2)
+plt.title('نمودار علمی: موج سینوسی با میرایی', fontsize=14, pad=10)
+plt.xlabel('زمان (ثانیه)', fontsize=12)
+plt.ylabel('دامنه', fontsize=12)
+plt.grid(True)
+plt.legend()
+
+# ذخیره تصویر با کیفیت بالا برای استفاده علمی
+plt.savefig('scientific_plot.png', dpi=300, bbox_inches='tight')
+plt.show()
